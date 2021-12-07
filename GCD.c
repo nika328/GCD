@@ -1,5 +1,5 @@
 #include <stdio.h>
-//FRACTIONS SUM PROGRAM
+//GCD PROGRAM
 
   int GCD (int num1, int num2)
   {
@@ -30,13 +30,14 @@
   }
 
 int main(void) {
-  
-  int n1, n2, d1, d2;
-  printf("Enter 2 fractions to be added: ");
-  scanf("%d/%d %d/%d", &n1, &d1, &n2, &d2);
-  int divisor=GCD(d1*d2, d1*n2+n1*d2);
-  printf("\nThe sum is %d/%d.\n", (d1*n2+n1*d2)/divisor, d1*d2/divisor);
 
- 
+  int n1, n2;
+  printf("Enter 2 numbers to find their GCD: ");
+  scanf("%d %d", &n1, &n2);
+
+  printf("\nThe GCD is %d. ", GCD(n1,n2));
+
+
   return 0;
 }
+
