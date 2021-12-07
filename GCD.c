@@ -1,22 +1,5 @@
-/*Name: Nikola Davidová 
-  Last revision: 
-
-
-  Program 01
-  
-  The Greatest Common Divisor / Factor: 
-  - The function to calculate the GCD of any two integers
-  - Input from user (numerator, denominator)
-  - Using the GCD function, the fraction is simlified into its base from
-  - Output is the simplified fraction
-
-
-
-*/
-
 #include <stdio.h>
-
-// Function
+//FRACTIONS SUM PROGRAM
 
   int GCD (int num1, int num2)
   {
@@ -46,19 +29,14 @@
    return 0;
   }
 
-
 int main(void) {
   
-  // Input from user
-   int num1, num2;
-   printf("Input the numerator: ");
-   scanf("%d",&num1);
+  int n1, n2, d1, d2;
+  printf("Enter 2 fractions to be added: ");
+  scanf("%d/%d %d/%d", &n1, &d1, &n2, &d2);
+  int divisor=GCD(d1*d2, d1*n2+n1*d2);
+  printf("\nThe sum is %d/%d.\n", (d1*n2+n1*d2)/divisor, d1*d2/divisor);
 
-   printf("Input the denominator: ");
-   scanf("%d",&num2);
-
-   //Output
-   printf("The simplified fraction is: %d/%d", num1/GCD(num2, num2), num2/GCD(num2, num1));
-
+ 
   return 0;
 }
